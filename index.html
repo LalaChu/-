@@ -27,11 +27,12 @@
     window.onload = function(){
       document.getElementById('sortBtn').addEventListener('click', sort)
     }
-    
+
     function sort(){
       const str = document.getElementById('arrInput').value;
       const arr = str.split(',');
-      bubbleSort(arr, document.getElementById('bubble'));
+      bubbleSort(str.split(','), document.getElementById('bubble'));
+      selectSort(str.split(','), document.getElementById('select'))
     }
 
     function printProcess(arr, tar){
@@ -41,5 +42,6 @@
     }
   </script>
   <script src="./bubble.js"></script>
+  <script src="./select.js"></script>
 </body>
 </html>
