@@ -29,6 +29,9 @@
     <div id="insert">
       this is insert
     </div>
+    <!-- <div id="insertDichotomy">
+      this is insertDichotomy
+    </div> -->
   </div>
   <script>
     window.onload = function(){
@@ -40,7 +43,8 @@
       const arr = str.split(',');
       bubbleSort(str.split(','), document.getElementById('bubble'));
       selectSort(str.split(','), document.getElementById('select'));
-      insertSort(str.split(','), document.getElementById('insert'))
+      insertSort(str.split(','), document.getElementById('insert'));
+      // insertSortDichotomy(str.split(','), document.getElementById('insertDichotomy'))
     }
 
     function printProcess(arr, tar){
@@ -52,5 +56,6 @@
   <script src="./bubble.js"></script>
   <script src="./select.js"></script>
   <script src="./insert.js"></script>
+  <!-- <script src="./insertDichotomy.js"></script> -->
 </body>
 </html>
