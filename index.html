@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .result{
+      display: flex;
+    }
+    .result div{
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div>
+      <input type="text" id="arrInput" placeholder="请用英文逗号分割"/>
+      <button type="button" id="sortBtn">开始排序</button>
+  </div>
+  <div class="result">
+    <div id="bubble"></div>
+    <div id="select"></div>
+  </div>
+  <script>
+    window.onload = function(){
+      document.getElementById('sortBtn').addEventListener('click', sort)
+    }
+    
+    function sort(){
+      const str = document.getElementById('arrInput').value;
+      const arr = str.split(',');
+      bubbleSort(arr, document.getElementById('bubble'));
+    }
+
+    function printProcess(arr, tar){
+      let node = document.createElement('div')
+      node.innerText = arr.join(',');
+      tar.appendChild(node);
+    }
+  </script>
+  <script src="./bubble.js"></script>
+</body>
+</html>
